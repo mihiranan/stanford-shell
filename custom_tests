@@ -1,0 +1,31 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Each custom test is given on a single line using format:
+#
+#     executable  arg(s)
+#
+# The executable is the name of the program to run.
+# The args are optional. If given, they are treated as a sequence of space-separated
+# command-line arguments with which to invoke the executable program.
+#
+# For each custom test, sanity check will invoke your executable program and the
+# solution program (using same command-line arguments), compare the two
+# outputs to verify if they match, and report the outcome.
+#
+# Blank lines and comment lines beginning with # are ignored.
+#
+
+# Each line runs at least 2 tests on stsh for the given milestone
+
+# Milestone 2 Tests (Single Commands)
+stsh < custom_test_files/milestoneTwoTests.txt
+
+# Milestone 3 Tests (Two-Process Pipelines)
+stsh < custom_test_files/milestoneThreeTests.txt
+
+# Milestone 4 Tests (Multi-Process Pipelines)
+stsh < custom_test_files/milestoneFourTests.txt
+
+# Milestone 5 Tests (I/O Redirection)
+stsh < custom_test_files/milestoneFiveTests.txt

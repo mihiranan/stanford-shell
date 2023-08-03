@@ -1,0 +1,4 @@
+echo aeiou > vowels.txt
+cat vowels.txt | ./conduit --count 3 > output.txt
+cat < /usr/include/stdio.h > local.h
+sort < invalid.txt | wc
