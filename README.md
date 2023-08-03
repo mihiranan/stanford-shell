@@ -3,8 +3,16 @@
 
 This project involves the creation of a functional shell that mimics key features found in Unix-like shells. It represents a critical exploration into operating system functionality, system calls, and inter-process communication.
 
-### System Calls Leveraged
-The project's implementation involves the extensive use of system calls such as `for`, `execvp`, `waitpid`, and `pipe`. These are fundamental to managing multiple processes and enabling various types of communication between them.
+### System Calls
+
+- **`fork()`:** Creates a new process by duplicating the calling process. Used to spawn new processes for running commands concurrently with the shell.
+
+- **`execvp()`:** Replaces the current process's memory space with a new program, using the PATH environment variable. Used with `fork()` to run external programs within a child process.
+
+- **`waitpid()`:** Waits for a specific child process to change its state, typically used to wait for termination. Synchronizes execution of child processes, managing background and foreground processing.
+
+- **`pipe()`:** Creates a unidirectional data channel for inter-process communication. Implements pipelines, chaining the output of one command as the input to another.
+
 
 ### Key Features
 
@@ -12,14 +20,14 @@ The project's implementation involves the extensive use of system calls such as 
 * **I/O Redirection:** It allows for sophisticated input and output redirection, enhancing the user's ability to perform tasks efficiently and with greater control.
 * **Process Management:** Through proper handling of system calls, the shell efficiently manages processes, including their creation, execution, and termination.
 
+---
+
+## Reflection
+
 ### Design Considerations
 * **Flexibility:** The design accommodates a wide variety of Unix-like commands and functions, ensuring broad applicability and usefulness.
 * **Efficiency:** Considerations were made to ensure the smooth execution of commands, particularly in terms of managing resources and maintaining responsiveness.
 * **Usability:** Focus on user experience led to the incorporation of features that enhance the user's ability to interact with the system effectively.
-
----
-
-## Reflection
 
 ### Strengths:
 - **Robust Functionality:** The shell's comprehensive feature set offers a substantial and versatile environment for executing commands and managing processes.
